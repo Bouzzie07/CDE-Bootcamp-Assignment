@@ -1,0 +1,11 @@
+#!/bin/bash
+
+#Create a variable for the current directory
+curr_dir=$HOME/Documents/cde_ass/csv_data
+echo $curr_dir
+
+#create a variable for the target directory
+target_dir=$HOME/Documents/cde_ass/json_and_csv_files
+echo $target_dir
+
+find $curr_dir \( -iname '*.csv' -o -iname '*.json' \) -exec mv {} $target_dir \;
