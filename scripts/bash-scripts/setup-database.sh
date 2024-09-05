@@ -1,3 +1,5 @@
+#!/bin/bash
+
 #Create a database.
 psql -U postgres -c "Create Database posey;"
 
