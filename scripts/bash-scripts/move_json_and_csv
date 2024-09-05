@@ -8,4 +8,7 @@ echo $curr_dir
 target_dir=$HOME/Documents/cde_ass/json_and_csv_files
 echo $target_dir
 
-find $curr_dir \( -iname '*.csv' -o -iname '*.json' \) -exec mv {} $target_dir \;
+
+#find one/all csv and json files within the current directory and move to the target directory
+find $curr_dir -maxdepth 1 \( -iname '*.csv' -o -iname '*.json' \) -exec mv {} $target_dir \;
+echo "csv and json files in $curr_dir have been moved to $target_dir"
